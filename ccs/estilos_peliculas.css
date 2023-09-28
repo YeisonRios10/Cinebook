@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #E9ECF4;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contenedor {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(auto);
+
+    grid-template-areas: "header header header"
+                         "sidebar contenido contenido"
+                         "trailer trailer trailer"
+                         "card-1 card-2 card-3"
+                         "footer footer footer";
+
+}
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+.contenedor .header{
+    background-color: #12203e;
+    color: #fff;
+    grid-area: header;
+}
+.contenedor .sidebar{
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ background-color: cadetblue;
+ grid-area: sidebar;
+}
+.contenedor .contenido{
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-area: contenido;
+}
+.contenedor .trailer{
+    background-color: chocolate;
+    text-align: center;
+    min-height: 100px;
+    grid-area: trailer;
+}
+.contenedor .card-1,
+.contenedor .card-2,
+.contenedor .card-3{
+    background-color: darksalmon;
+    color: #000;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor .card-1{
+    grid-area: card-1;
+}
+.contenedor .card-2{
+    grid-area: card-2;
+}
+.contenedor .card-3{
+    grid-area: card-3;
+}
+
+.contenedor .footer{
+    background-color: #12203e;
+    color: #fff;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor {
+        grid-template-areas: "header header header"
+                            "sidebar contenido contenido"
+                            "trailer trailer trailer"
+                            "footer footer footer";
+    }
+    /* Agrega esto para ocultar las cards en pantallas más pequeñas */
+    .contenedor .card-1,
+    .contenedor .card-2,
+    .contenedor .card-3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .contenedor {
+        grid-template-areas: "header header header"
+                            "sidebar sidebar sidebar"
+                            "contenido contenido contenido"
+                            "trailer trailer trailer"
+                            "footer footer footer";
+    }
+    /* Agrega esto para ocultar las cards en pantallas más pequeñas */
+    .contenedor .card-1,
+    .contenedor .card-2,
+    .contenedor .card-3 {
+        display: none;
+    }
+}
