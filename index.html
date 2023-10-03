@@ -1,251 +1,185 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ccs/estilo.css">
+    <link rel="stylesheet" href="ccs/estilos.css">
     <script src="https://kit.fontawesome.com/7f7fe5557e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="libro.ico">
-
-    <title>Bibliocinéfilo</title>
+    <title>Bibliocinéfilos</title>
 </head>
-
 <body>
-    <!-- barra de navegación -->
-    <header>
-        <div class="menu" id="inicio">
-            <nav class="nav">
-                <a href="#">Inicio</a>
-                <a href="#best">Best Seller</a>
-                <a href="pages/peliculas.html">Peliculas</a>
-                <a href="">Búsqueda Avanzada</a>
-                <a href="pages/contacto.html">Contacto</a>
-            </nav>
-            <hr>
-            <form class="buscar">
-                <input class="" type="search" placeholder="Buscar Libro">
-                <button class="" type="submit">Buscar </button>
-            </form>
-        </div>
-
-        <section class="carrusel">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="imagen/it/it-CARRUSEL.jpg" alt="First slide" target="video">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="imagen/lord/CarruselLord.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="imagen/Narnia/NarniaCarrusel.jpg" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="imagen/sinfin/SinFinCarrusel.jpg" alt="Four slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="imagen/harry/HarryCarrusel.jpg" alt="Five slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+    <div class="contenedor">
+        <!--* ======================================================================= -->
+        <!--* =====================M E N U  -  R E S P O S I V E===================== -->
+        <!--* ======================================================================= -->
+        <header  class="header">
+            <h2>Bibliocinéfilo</h2>
+            <nav class="nave">
+                <ul class="menu" id="menu">
+                    <li class="item">
+                        <a href="#" class="link">Inicio</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Libros</a>
+                    </li>
+                     <!-- <li class="item">
+                        <a href="#" class="link">Géneros</a>
+                    </li> -->
+                    <li class="item">
+                        <a href="#" class="link">Búsqueda</a>
+                    </li>
+                    <!--<li class="item">
+                        <a href="#" class="link">Nosotros</a>
+                    </li> -->
+                </ul>
+            </nav> 
+            <li class="user">
+                <i class="fa-solid fa-user " style="color: #56377c;"></i>
+            </li>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
             </div>
-        </section>
-    </header>
-    <!-- cuerpo de la página -->
-    <main>
+        </header>
         
-        <!-- tarjetas con artículos -->
-        <section class="best" id="best">
-            <h2>Best Seller</h2>
-            <!-- tarjetas -->
-            <div class="libros"> <!--div contenedora de las tarjetas -->
-                <div class="tarjeta" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
-                    <img src="imagen/it/it.jpg" alt="It el payaso" width="300">
-                    <h3>It</h3>
-                    <div class="popup" id="popup1">
-                        <iframe src="https://www.youtube.com/embed/_oBZ_zTz0Nw?si=ldHQhbz-4Zrpmqje&amp;start=73" frameborder="0" allowfullscreen></iframe>
-                        <p>Género: Terror</p>
-                        <p>Sinopsis: La película cuenta la historia de siete niños marginados...</p>
-                    </div>
+        
+        <!--? ======================================================================= -->
+        <!--? ======================= C  A  R  R  U  S  E  L  ======================= -->
+        <!--? ======================================================================= -->
+        
+        <div class="carrusel">
+            <div class="grande">
+                <img class="imagen" src="img/alicia/1.jpeg" alt="img" >
+                <img class="imagen" src="img/it/it.jpg" alt="img" >
+                <img class="imagen" src="img/harry/harry.jpg" alt="img" > 
+            </div>
+            <ul class="puntos">
+                <li class="punto activo"><i class="fa-solid fa-circle" style="color: #ccd2db;"></i></li>
+                <li class="punto"><i class="fa-solid fa-circle" style="color: #ccd2db;"></i></li>
+                <li class="punto"><i class="fa-solid fa-circle" style="color: #ccd2db;"></i></li>
+            </ul>
+        </div>
+
+        
+        <!--! ======================================================================= -->
+        <!--! ====================== P  E  L  Í  C  U  L  A  S ====================== -->
+        <!--! ======================================================================= -->
+
+        <div class="pelis">
+           <div class="tarjeta">
+            <img src="img/alicia/poster-alicia.jpg" alt="Alicia en el Pais de las Maravillas">
+            <a class="link-peliculas" href="pages/peliculas.html">Alice in Wonderland</a>
+           </div>
+           <div class="tarjeta">
+            <img src="img/harry/camara.jpg" alt="Harry Potter La Cámara Secreta">
+            <span>Harry Potter La Cámara Secreta</span>
+           </div>
+           <div class="tarjeta">
+            <img src="img/it/it-eso.png" alt="IT (ESO)">
+            <span>IT (ESO)</span>
+           </div>
+           <div class="tarjeta">
+            <img src="img/leyenda/soy-leyenda.png" alt="Soy Leyenda">
+            <span>Soy Leyenda</span>
+           </div>
+        </div>
+
+        <!--? ======================================================================= -->
+        <!--? ===========================  A  S  I  D  E  =========================== -->
+        <!--? ======================================================================= -->
+
+        <div class="aside">
+            <div >
+                <h4>Películas Destacadas</h4>
+            </div>
+            <div class="destacadas">
+                <div class="destacada">
+                    <img src="img/lord/losanillos.jpeg" alt="El Retorno">
+                    <span>El Retorno</span>
                 </div>
-                <div class="tarjeta" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
-                    <img src="imagen/leyenda/legend.jpg" alt="It el payaso" width="300">
-                    <h3>Soy leyenda</h3>
-                    <div class="popup" id="popup1">
-                        <iframe src="https://www.youtube.com/embed/TXQ7kRnFXS4?si=jjaEpzy-XQ8MSwlM&amp;start=65" frameborder="0" allowfullscreen></iframe>
-                        <p>Género: Terror</p>
-                        <p>Sinopsis: La película cuenta la historia de siete niños marginados...</p>
-                    </div>
+                <div class="destacada">
+                    <img src="img/alicia/alicia - 1.webp" alt="Alicia detrás del Espejo">
+                    <span>Alicia detrás del Espejo</span>
                 </div>
-                <div class="tarjeta" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
-                    <img src="imagen/alicia/alicia.jpg" alt="It el payaso" width="300">
-                    <h3>Alicia</h3>
-                    <div class="popup" id="popup1">
-                        <iframe src="https://www.youtube.com/embed/mUHSNPfNkIs?si=QadtZUWKGRTnB7uK&amp;start=41"  frameborder="0" allowfullscreen></iframe>
-                        <p>Género: Terror</p>
-                        <p>Sinopsis: La película cuenta la historia de siete niños marginados...</p>
-                    </div>
+                <div class="destacada">
+                    <img src="img/it/it-globo.jpg" alt="IT Capítulo 2">
+                    <span>IT Capítulo 2</span>
+                </div>
+                <div class="destacada">
+                    <img src="img/matilda/matilda.jpg" alt="Matilda">
+                    <span>Matilda</span>
                 </div>
             </div>
-            <!--cierra el div contenedora de las tarjetas -->
+        </div>
+        
 
-        </section>
-
-        <!--Seccion de las peliculas adaptadas al cine -->
-        <section class="best" id="adaptaciones">
-            <h2>Adaptaciones Literarias</h2>
-            <!-- tarjetas -->
-            <div class="libros"> <!--div contenedora de las tarjetas -->
-
-                <div class="tarjeta">
-                    <img src="imagen/it/it.jpg" alt="It el payaso" width="300">
-                    <div class="texcard"><!--texto de la tarjeta-->
-                        <h3>IT (Eso)</h3>
-                        <p>
-                            La película cuenta la historia de siete niños marginados del municipio de Derry, Maine (EE.
-                            UU.), que se llaman a sí mismos "El Club de los Perdedores". Todos se han visto marginados
-                            por uno u otro motivo; todos cargan con alguna de las "cualidades" favoritas de los abusones
-                            de la ciudad... y todos han visto sus peores pesadillas hacerse realidad en forma de un
-                            antiguo depredador que cambia de forma y al que solo logran llamar "eso".
-                        </p>
-                    </div><!-- cierra texto de la tarjeta-->
-
+        <!--* ======================================================================= -->
+        <!--* =====================M  A  R  Q  U  E  S  I  N  A ===================== -->
+        <!--* ======================================================================= -->
+        <div class="marquesina">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide"><img src="img/alicia/1.jpeg" alt=""></img></div>
+                    <div class="slide"><img src="img/harry/harry.jpg"  alt=""></img></div>
+                    <div class="slide"><img src="img/juegos/juegosdelhambre.webp" alt=""></img></div>
+                    <div class="slide"><img src="img/leyenda/legend.jpg" alt=""></img></div>
+                    <div class="slide"><img src="img/it/it.jpg" alt=""></img></div>
+                    <div class="slide"><img src="img/lord/losanillos.jpeg" alt=""></img></div>
+                    <div class="slide"><img src="img/alicia/1.jpeg" alt=""></img></div>
+                    <div class="slide"><img src="img/harry/harry.jpg"  alt=""></img></div>
+                    <div class="slide"><img src="img/juegos/juegosdelhambre.webp" alt=""></img></div>
+                    <div class="slide"><img src="img/leyenda/legend.jpg" alt=""></img></div>
+                    <div class="slide"><img src="img/it/it.jpg" alt=""></img></div>
+                    <div class="slide"><img src="img/lord/losanillos.jpeg" alt=""></img></div>
                 </div>
-                <div class="tarjeta">
-                    <img src="imagen/leyenda/legend.jpg" alt="Poster de la pelicula Soy Leyenda" width="300">
-                    <div class="texcard"><!--texto de la tarjeta-->
-                        <h3>Soy Leyenda </h3>
-                        <p>Robert Neville es un brillante científico, que, sin embargo, no ha podido impedir la
-                            expansión de un incurable virus creado por el hombre. Neville, inexplicablemente inmune al
-                            contagio, es el último superviviente humano de la ciudad de Nueva York y, quizá, del mundo.
-                            Pero Neville no está completamente solo. Víctimas mutantes de la plaga merodean en las
-                            sombras, vigilando cada uno de los movimientos del científico y esperando que cometa un
-                            error fatal para beber su sangre.
-
-                        </p>
-                    </div><!-- cierra texto de la tarjeta-->
-                </div>
-                <div class="tarjeta">
-                    <img src="imagen/alicia/alicia.jpg" alt="Alicia en el País de las Maravillas" width="300">
-                    <div class="texcard"><!--texto de la tarjeta-->
-                        <h3>Alicia en el País de las Maravillas</h3>
-                        <p>Alicia, una joven de 19 años, acude a una mansión victoriana para asistir a una fiesta de la
-                            alta sociedad. Cuando está a punto de recibir públicamente una propuesta de matrimonio, sale
-                            corriendo tras un conejo blanco.
-                        </p>
-                    </div><!-- cierra texto de la tarjeta-->
-                </div>
-            </div><!--cierra el div contenedora de las tarjetas -->
-        </section>
-        <!-- MARQUESINA DE LIBROS O ESCRITORES-->
-    </main>
-    <section class="trailer">
-        <h2>Trailers</h2>
-        <div class="slider">
-            <div class="slide-track">
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/alicia/alicia.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/harry/harry.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/alicia/alicia.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/harry/harry.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/alicia/alicia.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/harry/harry.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/alicia/alicia.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/harry/harry.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/alicia/alicia.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/harry/harry.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/alicia/alicia.jpg" alt="">
-                </div>
-                <div class="slide" onclick="openVideoModal('https://www.youtube.com/embed/fP4BBZ76DGg')">
-                    <img src="imagen/harry/harry.jpg" alt="">
-                </div>
-                <!-- Agrega más imágenes y enlaces a videos aquí -->
             </div>
-        </div>
-    </section>
-    
-    <!-- Modal para reproducir el video -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeVideoModal()">&times;</span>
-            <iframe id="videoIframe" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-        </div>
     </div>
 
+        <!--! ======================================================================= -->
+        <!--! ==================== P  E  L  Í  C  U  L  A  S 2 ====================== -->
+        <!--! ======================================================================= -->
 
-
-    <!--  Seccion del footer">-->
-    <footer>
-        <div class="contenidoFooter">
-            <div class="redesSociales">
-                <h4>Redes Sociales</h4>
-                <ul>
-                    <li><a href="#inicio"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#inicio"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><i class="fa-brands fa-linkedin"></i></li>
-                    <li><a href="#inicio"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#inicio"><i class="fa-brands fa-github"></i></a></li>
-
-
-                </ul>
+        <div class="pelis2">
+            <div class="tarjeta">
+             <img src="img/arraival/arraival.jpg" alt="La Llegada">
+             <span>La Llegada</span>
             </div>
-            <div class="footerLogo">
-                <img src="libro.ico" alt="imagen de libro / logo de la pag">
+            <div class="tarjeta">
+             <img src="img/lord/el señor de los anillos - la comunidad.jpg" alt="La Comunidad del Anillo">
+             <span>La Comunidad del Anillo</span>
             </div>
-            <div class="footerLinks">
-                <h4>LINKS</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#best">Best Seller</a></li>
-                    <li><a href="#adaptaciones">Adaptaciones</a></li>
-                </ul>
+            <div class="tarjeta">
+             <img src="img/matilda/matilda1.png" alt="Matilda">
+             <span>Matilda</span>
+            </div>
+            <div class="tarjeta">
+             <img src="img/juegos/juegos-del-hambre.png" alt="Juegos del Hambre">
+             <span>Juegos del Hambre</span>
+            </div>
+         </div>
+        <!--? ======================================================================= -->
+        <!--? ========================  F  O  O  T  E  R  =========================== -->
+        <!--? ======================================================================= -->
+        <div class="footer">
+            <div class="redes ">
+                <h4 class="text-white">Contáctanos</h4>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-regular fa-envelope"></i></i> </a>
+            </div>
+        
+            <div class="tecno">
+                <h4 class="text-white ">Tecnologías</h4>
+                <a href="#"> <i class="fa-brands fa-bootstrap"></i></a>
+                <a href="#"><i class="fa-brands fa-css3"></i></a>
+                <a href="#"><i class="fa-brands fa-font-awesome"></i></a>
+                <a href="#"><i class="fa-brands fa-html5"></i></a>
+                <a href="#"><i class="fa-brands fa-js"></i></a>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        <script src="js/js.js"></script>
-    </footer>
+        </div>
+    </div>
+    <script src="js/javaScript.js"></script>
 </body>
-
 </html>
-
-
-          

@@ -4,24 +4,28 @@
 }
 
 body{
-    background-color: #E9ECF4;
-    color: #000;
+    background-image: url(../img/alicia/alicia_fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #000;
+    color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .contenedor {
-    width: 90%;
+    width: 95%;
     max-width: 1300px;
     margin: 20px auto;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(4, 1fr);
     grid-template-rows: repeat(auto);
 
-    grid-template-areas: "header header header"
-                         "sidebar contenido contenido"
-                         "trailer trailer trailer"
-                         "card-1 card-2 card-3"
-                         "footer footer footer";
+    grid-template-areas: "header header header header"
+                         "sidebar contenido contenido contenido"
+                         "trailer trailer trailer trailer"
+                         "card-1 card-2 card-3 card-4"
+                         "footer footer footer footer";
 
 }
 .contenedor > div,
@@ -33,41 +37,87 @@ body{
     padding: 20px;
     border-radius: 4px;
 }
+/* inicio estilos menú */
 .contenedor .header{
-    background-color: #12203e;
-    color: #fff;
     grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+    background-color: transparent;
 }
+.menu{
+    /*Estilo para resetear los margenes y viñetas*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 600px;
+    padding: .4em;
+}
+.item{
+    list-style: none;
+}
+.link {
+    color: white;
+    text-decoration: none;
+}
+.user{
+    list-style: none;
+}
+.hamburger{
+    cursor: pointer;
+    display:none;
+}
+.fa-solid{
+    font-size:1.3rem ;
+}
+/* fin estilos menú */
 .contenedor .sidebar{
+ background-color: transparent;
  display: flex;
  justify-content: center;
  text-align: center;
- background-color: cadetblue;
+ flex-direction: column;
  grid-area: sidebar;
 }
+.sidebar .imagen{
+    width: 100%;
+    height: auto;
+    margin-bottom: 3%;
+}
+
 .contenedor .contenido{
-    background-color: cadetblue;
+    background-color: rgba(0,0,6,0.5);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
+    
     grid-area: contenido;
 }
+
 .contenedor .trailer{
-    background-color: chocolate;
+    background-color: transparent;
     text-align: center;
-    min-height: 100px;
+    min-height: 500px;
     grid-area: trailer;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
 }
 .contenedor .card-1,
 .contenedor .card-2,
-.contenedor .card-3{
-    background-color: darksalmon;
+.contenedor .card-3,
+.contenedor .card-4{
+    background-color: transparent;
     color: #000;
-    height: 100px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10%;
 }
 .contenedor .card-1{
     grid-area: card-1;
@@ -79,39 +129,98 @@ body{
     grid-area: card-3;
 }
 
+.contenedor .card-4{
+    grid-area: card-4;
+}
+/*? = = = = = E S T I L O    D E L   F O O T E R  = = = = = */
 .contenedor .footer{
-    background-color: #12203e;
+    background-color: transparent;
     color: #fff;
+    width: 100%;
     grid-area: footer;
+    display: flex;
+    margin-top: 2.5em;
+    padding: .5em;
+    justify-content: space-around;
+}
+.redes {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+.tecno {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
 }
 
 @media screen and (max-width: 768px){
     .contenedor {
-        grid-template-areas: "header header header"
-                            "sidebar contenido contenido"
-                            "trailer trailer trailer"
-                            "footer footer footer";
+        grid-template-areas: "header header header header"
+                            "sidebar sidebar contenido contenido"
+                            "trailer trailer trailer trailer"
+                            "footer footer footer footer";
     }
     /* Agrega esto para ocultar las cards en pantallas más pequeñas */
     .contenedor .card-1,
     .contenedor .card-2,
-    .contenedor .card-3 {
+    .contenedor .card-3,
+    .contenedor .card-4 {
         display: none;
+    }
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 @media screen and (max-width: 480px){
     .contenedor {
-        grid-template-areas: "header header header"
-                            "sidebar sidebar sidebar"
-                            "contenido contenido contenido"
-                            "trailer trailer trailer"
-                            "footer footer footer";
+        grid-template-areas: "header header header header"
+                            "sidebar sidebar sidebar sidebar"
+                            "contenido contenido contenido contenido"
+                            "trailer trailer trailer trailer"
+                            "footer footer footer footer";
     }
     /* Agrega esto para ocultar las cards en pantallas más pequeñas */
     .contenedor .card-1,
     .contenedor .card-2,
-    .contenedor .card-3 {
+    .contenedor .card-3,
+    .contenedor .card-4 {
+        display: none;
+    }
+    .menu{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transition: transform .8s;
+        transform: translateY(-100%);
+    }
+    .item{
+        margin-top: 0.2em;
+    }
+    
+    .user{
+        margin-right: 2.5em;
+    }
+    .hamburger{
+        display: inherit;
+        position: absolute;
+        top:2.5rem;
+        right:1em;
+    }
+
+    .hamburger-show{
+        transform: translateY(0);
+    }
+    .redes{
+        width: 80vw;
+        justify-content: space-around;
+        
+    }
+    .tecno{
         display: none;
     }
 }

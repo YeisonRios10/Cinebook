@@ -1,0 +1,393 @@
+
+/** MAQUETADO DE LA PÁGINA PARA PANTALLA DE COMPU*/
+*{
+    margin:0px;
+    
+}
+
+.contenedor{
+    
+    background-color: rgb(22, 21, 21);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    display: grid;
+    grid-template: auto auto auto auto auto auto / 27% 27% 27% 1fr;
+    grid-template-areas: "header header header header"
+                        "carrusel carrusel carrusel carrusel"
+                        "pelis pelis pelis aside"
+                        "marquesina marquesina marquesina aside"
+                        "pelis2 pelis2 pelis2 aside"
+                        "footer footer footer footer";
+}
+
+/** = = = = = E S T I L O   D E L   M E N U = = = = = */
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+}
+
+.menu{
+    /*Estilo para resetear los margenes y viñetas*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 600px;
+    padding: .4em;
+}
+.item{
+    list-style: none;
+}
+.link {
+    color: white;
+    text-decoration: none;
+}
+.user{
+    list-style: none;
+}
+.hamburger{
+    cursor: pointer;
+    display:none;
+}
+.fa-solid{
+    font-size:1.3rem ;
+}
+
+/*? = = = = = E S T I L O   D E L   C A R R U S E L = = = = = */
+.carrusel{
+    grid-area: carrusel;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+.grande{
+    width: 300%;
+    height: 95%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+.imagen{
+    display: flex;
+    width: calc(100% / 3 );
+    align-items: center;
+    height: 100%;
+    flex-flow: row nowrap;
+    object-fit: cover;
+}
+.puntos{
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.punto{
+    width: 2.5em;
+    margin-left: 1em;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    margin-top: .5em;
+}
+.punto.activo{
+    background-color: rgb(70, 67, 67);
+    border-radius: 200px 200px 200px 200px;
+}
+/*! = = = = = E S T I L O   P E L I C U L A   S E C C  1  = = = = = */
+.pelis{
+    grid-area: pelis;
+    width: 80vw;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.link-peliculas{
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0074D9;
+    border: 1px solid #0074D9;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+.link-peliculas:hover{
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05); /* Aumenta el tamaño del enlace en un 5% */
+    border-color: #0056b3;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra suave */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.link-peliculas:active{
+    background-color: #004080;
+    border-color: #004080;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.tarjeta{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+}
+ .tarjeta img{
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0.5rem;
+ }
+/*? = = = = = E S T I L O   D E L   A S I D E  = = = = = */
+.aside{
+    grid-area: aside;
+    width: 18.6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.destacadas{
+    display: flex;
+    flex-direction: column;
+}
+.destacada{
+    width: 100%;
+    height: 34vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+.destacada img{
+    width:90%;
+}
+
+/** = = = = = E S T I L O   D E  M A R Q U E S I N A = = = = = */
+.marquesina{
+    grid-area: marquesina;
+    margin-top: 1.5em;
+}
+.slider{
+    height: 15vh;
+    overflow: hidden;   
+    width: 80vw;
+    height: 20vh;
+    overflow: hidden; 
+}
+.slider .slide-track{
+    display: flex;
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width: calc(200px * 12);
+    animation-play-state: running;    
+}
+.slider .slide-track:hover{
+    animation-play-state: paused;
+}
+.slider .slide{
+    width: 200px;    
+}
+.slider .slide img{
+    width: 100%;
+    height: 75%;
+}
+@keyframes scroll{
+    0%{
+        -webkit-transform: translatex(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(calc(-200px * 6)) ;
+        transform: translateX(calc(-200*6));
+    }
+}
+/*! = = = = = E S T I L O   P E L I C U L A   S E C C  2  = = = = = */
+.pelis2{
+    grid-area: pelis2;
+    width: 80vw;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-left: .5em;
+}
+
+
+/*? = = = = = E S T I L O    D E L   F O O T E R  = = = = = */
+.footer{
+    grid-area: footer;
+    width: 100vw;
+    display: flex;
+    margin-top: 2.5em;
+    padding: .5em;
+    justify-content: space-around;
+}
+.redes {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+.tecno {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/**  Media query  para pantalla de 768px TABLET*/
+@media  (max-width: 768px) {
+    .contenedor{
+        /* background-color: rgb(108, 156, 108); */
+        grid-template:  "header header header" 
+                         "carrusel carrusel carrusel"
+                         "pelis pelis pelis"
+                         "marquesina marquesina marquesina"
+                         "pelis2 pelis2 pelis2"
+                         "aside aside aside"
+                         "footer footer footer";
+    }
+    .menu{
+        width: 450px;
+    }
+    .user{
+
+    }
+    .carrusel{
+        width: 100%;
+        height:100%;
+    }
+    .grande{
+        height: 92%;
+    }
+    .pelis{
+        width: 95vw;
+    }
+    .pelis2{
+        width: 95vw;
+    }
+    .tarjeta{
+        text-align: center;
+    }
+    .aside{
+        width: 95vw;
+        flex-direction: column;
+        padding-top: 1em;
+        margin-left: .5em;
+    }
+    .destacadas{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .destacada{
+        flex-direction: column;
+        font-size: .9em;
+        }
+    .destacada img{
+        width:90%;
+        height: 60%;
+        object-fit: cover;
+    }
+    .slider{
+        width: 95vw;
+    }
+    .footer{
+        width: 96vw;
+    }
+}
+
+/**  Media query  para pantalla de 425px cel*/
+@media  (max-width: 425px) {
+    .contenedor{
+        /* background-color: rgb(108, 156, 108); */
+        grid-template:  "header" 
+                         "carrusel"
+                         "pelis"
+                         "marquesina"
+                         "footer";
+    }
+   
+    
+    .menu{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transition: transform .8s;
+        transform: translateY(-100%);
+    }
+ 
+    .item{
+        margin-top: 0.2em;
+    }
+    
+    .user{
+        margin-right: 2.5em;
+    }
+    .hamburger{
+        display: inherit;
+        position: absolute;
+        top:2.5rem;
+        right:1em;
+    }
+
+    .hamburger-show{
+        transform: translateY(0);
+    }
+    .carrusel{
+        width: 95%;
+        height:100%;
+    }
+    .grande{
+        height: 86%;
+    }
+    
+    .pelis{
+        width: 100vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .tarjeta{
+        width: 46%;
+        height: auto;
+        flex-direction: column;
+    }
+    .tarjeta img{
+        width: 95%;
+        height: 100%;
+    }
+    .aside{
+        display: none;
+    }
+    .marquesina{
+        display: none;
+    }
+    .pelis2{
+        display:none;
+    }
+    .footer{
+        width: 96vw;
+    }
+    .redes{
+        width: 80vw;
+        justify-content: space-around;
+        
+    }
+    .tecno{
+        display: none;
+    }
+}
+
+
