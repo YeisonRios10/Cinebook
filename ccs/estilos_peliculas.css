@@ -4,13 +4,23 @@
 }
 
 body{
-    background-image: url(../img/alicia/alicia_fondo.jpg);
+    
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-color: #000;
     color: whitesmoke;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.bg-alicia{
+    background-image: url(../img/alicia/alicia_fondo.jpg);
+}
+.bg-harry{
+    background-image: url(../img/harry/harry_ff.jpeg); 
+}
+.bg-maze-runner{
+    background-image: url(../img/maze_runner/fondo2.jpg);
 }
 .contenedor {
     width: 95%;
@@ -54,6 +64,15 @@ body{
     list-style: none;
     width: 600px;
     padding: .4em;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Agrega una transición suave al cambio de color */
+}
+
+.menu a:hover {
+    color: #F39C12; /* Cambia el color al pasar el mouse */
 }
 .item{
     list-style: none;
@@ -107,6 +126,7 @@ body{
     flex-direction: column;
 
 }
+
 .contenedor .card-1,
 .contenedor .card-2,
 .contenedor .card-3,
@@ -121,17 +141,45 @@ body{
 }
 .contenedor .card-1{
     grid-area: card-1;
+    position: relative;
 }
 .contenedor .card-2{
     grid-area: card-2;
+    position: relative;
 }
 .contenedor .card-3{
     grid-area: card-3;
+    position: relative;
 }
 
 .contenedor .card-4{
     grid-area: card-4;
+    position: relative;
+    
 }
+/* Estilo para el botón (oculto por defecto) */
+.boton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: #0074D9;
+    color: #fff;
+    text-decoration: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+.boton:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+  /* Estilo para mostrar el botón al pasar el ratón por encima de la tarjeta */
+  .card-1:hover .boton, .card-2:hover .boton,.card-3:hover .boton,.card-4:hover .boton {
+    display: inline-block;
+  }
+  
 /*? = = = = = E S T I L O    D E L   F O O T E R  = = = = = */
 .contenedor .footer{
     background-color: transparent;
@@ -173,6 +221,7 @@ body{
         display: flex;
         justify-content: space-between;
     }
+    
 }
 
 @media screen and (max-width: 480px){
@@ -223,4 +272,24 @@ body{
     .tecno{
         display: none;
     }
+    #slide-harry{
+        content: url('../img/harry/harry_f.jpg');
+    }
+    #slide-alicia{
+        content: url("../img/alicia/alicia2.jpg");
+    }
+    #slide-maze-runner{
+        content: url("../img/maze_runner/fondo.jpg");
+    }
+    .sidebar h1{
+        order: 1;
+        margin-bottom: 4%;
+    }
+    .sidebar img{
+        order: 2;
+    }
+    .contenido h1{
+        display: none;
+    }
+ 
 }
