@@ -44,3 +44,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /* esto cierra la funcion del DOM*/
+
+/* ==============L O G I C A     C O N T A C T O ========================================  */
+
+function validarFormulario(){
+    nombre = document.getElementById("nombre").value
+    correo = document.getElementById("correo").value
+    mensaje = document.getElementById("mensaje").value
+
+    let validarCorreo = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/.test(correo)
+    let validarNombre = /^[a-zA-Z]*$/.test(nombre);
+
+   
+
+    if (nombre === "" && correo === "" && mensaje === "") {
+        alert("Por favor, complete todos los campos");
+        
+        return false;
+    }
+    if (nombre === "" ) {
+        alert("Por favor, complete el campo nombre");
+        document.getElementById("nombre").focus()
+        return false;
+    }
+    if(!validarNombre){
+        alert("Por favor complete bien el campo NOMBRE")
+        document.getElementById("nombre").focus()
+        return false
+    }
+
+    if (correo === "") {
+        alert("Por favor, complete el campo correo");
+        document.getElementById("correo").focus()
+        return false;
+    }
+
+    if(!validarCorreo){
+        alert("Por favor complete bien el campo CORREO")
+        document.getElementById("correo").focus()
+        return false
+     }
+
+    if (mensaje === "") {
+        alert("Por favor, complete el campo mensaje");
+        document.getElementById("mensaje").focus()
+        return false;
+    }
+    return enviarAlerta();
+    
+}
+
+function enviarAlerta(){
+    alert("Gracias x contactarnos, en breve te responderemos")
+    location.href = "../index.html"
+}
