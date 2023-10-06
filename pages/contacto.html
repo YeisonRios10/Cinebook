@@ -4,73 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../ccs/estilo.css">
+    <link rel="stylesheet" href="../ccs/estilos.css">
     <script src="https://kit.fontawesome.com/7f7fe5557e.js" crossorigin="anonymous"></script>
     
     <title>Bibliocinéfilo</title>
 </head>
 <body>
-    <header>
-        <div class="menu">
-            <nav class="nav">
-                <a href="../index.html">Inicio</a>
-                <a href="../index.html">Best Seller</a>
-                <a href="../index.html">Adaptaciones</a>
-                <a href="">Búsqueda</a>
-                <a href="">Contacto</a>
-            </nav>
-            <form class="buscar">
-                <input class="" type="search" placeholder="Buscar">
-                <button class="" type="submit">Buscar</button>
-              </form>
+    <header  class="header">
+        <h2>Bibliocinéfilo</h2>
+        <nav class="nave">
+            <ul class="menu" id="menu">
+                <li class="item">
+                    <a href="#" class="link">Inicio</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">Libros</a>
+                </li>
+                 <!-- <li class="item">
+                    <a href="#" class="link">Géneros</a>
+                </li> -->
+                <li class="item">
+                    <a href="#" class="link">Búsqueda</a>
+                </li>
+                <!--<li class="item">
+                    <a href="#" class="link">Nosotros</a>
+                </li> -->
+            </ul>
+        </nav> 
+        <li class="user">
+            <i class="fa-solid fa-user " style="color: #56377c;"></i>
+        </li>
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
         </div>
     </header>
+    
     <main>
        
+         
         <section>
-            <div><!--formulario de contacto -->
-                <h3>Escríbenos</h3>
-                <form action="">
-                    <label for="">Nombre y Apellido</label>
-                    <input class="form" type="text" placeholder="Nombre" required minlength="3" maxlength="12">
-                    <label for="">Asunto</label>
-                    <input class="form" type="text" placeholder="Apellido" required required minlength="3" maxlength="20"><br><br>
-
-                    <textarea class="formtexto" name="" id="" cols=" 52" rows="6" placeholder="Sobre qué quieres hablar"
-                        required>
-                    </textarea>
-
-                    <div class="enviar">
-                        <input type="submit" value="Enviar">
-                    </div>
-                </form>
-            </div>
-        </section>
+            <!--formulario de contacto -->
+            <h3>Formulario de contacto</h3>
+            <form class="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" ><br><br>
+                
+                <label for="correo">Correo Electrónico:</label>
+                <input type="text" id="correo" name="correo"><br><br>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea><br><br>
+                
+                <input type="button" value="Enviar" onclick="validarFormulario()" >
+            </form>
+    </section>
     </main>
     <footer>
-        <div class="contenidoFooter">
-            <div class="redesSociales">
-                <h4>Redes Sociales</h4>
-                <ul>
-                    <li><a href="#inicio"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#inicio"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#inicio"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="#inicio"><i class="fa-brands fa-instagram"></i></a></li>
-                    
-                </ul>
+        <div class="footer">
+            <div class="redes ">
+                <h4 class="text-white">Contáctanos</h4>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-regular fa-envelope"></i></i> </a>
             </div>
-            <div class="footerLogo">
-                <img src="libro.ico" alt="imagen de libro / logo de la pag">
+        
+            <div class="tecno">
+                <h4 class="text-white ">Tecnologías</h4>
+                <a href="#"> <i class="fa-brands fa-bootstrap"></i></a>
+                <a href="#"><i class="fa-brands fa-css3"></i></a>
+                <a href="#"><i class="fa-brands fa-font-awesome"></i></a>
+                <a href="#"><i class="fa-brands fa-html5"></i></a>
+                <a href="#"><i class="fa-brands fa-js"></i></a>
             </div>
-            <div class="footerLinks">
-                <h4>LINKS</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#best">Best Seller</a></li>
-                    <li><a href="#adaptaciones">Adaptaciones</a></li>
-                </ul>
-            </div>          
         </div>
     </footer>
+    <script src="../js/javaScript.js"></script>
 </body>
 </html>

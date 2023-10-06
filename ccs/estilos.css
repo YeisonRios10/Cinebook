@@ -245,6 +245,20 @@
     justify-content: space-around;
 }
 
+
+/*? = = = = = E S T I L O    D E L   F O R M U L A R I O = = = = = */
+.formulario {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%; 
+}
+
+h3{
+    text-align: center;
+    margin: 20px;
+
+}
+
 /**  Media query  para pantalla de 768px TABLET*/
 @media  (max-width: 768px) {
     .contenedor{
