@@ -27,7 +27,18 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-
+.bg-escritor-leyenda{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-soy-leyenda-.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.bg-escritor-maze{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-correr_o_morir.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 .contenedor {
     max-width: 1300px;
     margin: 20px auto;
@@ -303,6 +314,12 @@ body{
     }
     #slide-it{
         content: url("../img/escritores/king-it3.jpeg");
+    }
+    #slide-leyenda{
+        content: url("../img/escritores/richard-souy-leyenda.jpeg");
+    }
+    #slide-maze{
+        content: url("../img/escritores/james_Dashner_2.jpeg");
     }
     .sidebar h1{
         order: 1;
