@@ -8,37 +8,45 @@ body{
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
-
-.bg-escritor-alicia{
+#bg-escritor {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.alicia{
     background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/alicia-libro.webp);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    
 }
-.bg-escritor-potter{
+.potter{
     background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-harry.webp);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    
 }
-.bg-escritor-it{
+.it{
     background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-it.webp);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    
 }
-.bg-escritor-leyenda{
+.leyenda{
     background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-soy-leyenda-.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    
 }
-.bg-escritor-maze{
+.maze{
     background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-correr_o_morir.jpeg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    
 }
+.juegos{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo_juegos.webp);
+    
+}
+.matilda{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-matilda.jpg);
+    
+}
+.anillos{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/el-senor-de-los-anillos.jpg);
+    
+}
+
+
 .contenedor {
     max-width: 1300px;
     margin: 20px auto;
@@ -230,7 +238,7 @@ body{
 @media screen and (max-width: 768px){
     .contenedor {
         grid-template-areas: "header header header header"
-                            "sidebar sidebar contenido contenido"
+                            "contenido contenido sidebar sidebar "
                             "trailer trailer trailer trailer"
                             "footer footer footer footer";
     }
@@ -320,6 +328,15 @@ body{
     }
     #slide-maze{
         content: url("../img/escritores/james_Dashner_2.jpeg");
+    }
+    #slide-collins{
+        content: url("../img/escritores/susan-collins.webp");
+    }
+    #slide-matilda{
+        content: url("../img/escritores/Roald_Dahl-2.jpg");
+    }
+    #slide-tolkien{
+        content: url("../img/escritores/jrr-tolkien.png");
     }
     .sidebar h1{
         order: 1;
