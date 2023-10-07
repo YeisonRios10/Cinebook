@@ -22,6 +22,21 @@ body{
 .bg-maze-runner{
     background-image: url(../img/maze_runner/fondo2.jpg);
 }
+.bg-it{
+    background-image: url(../img/it/it-fondo.jpg);
+}
+.bg-matilda{
+    background-image: url(../img/matilda/horizo.jpeg);
+}
+.bg-leyenda{
+    background-image: url(../img/leyenda/fondo.jpg);
+}
+.bg-juegos-hambre{
+    background-image: url(../img/juegos/fondo.jpg);
+}
+.bg-señor-anillos{
+    background-image: url(../img/lord/fondo1.jpg);
+}
 .contenedor {
     width: 95%;
     max-width: 1300px;
@@ -280,6 +295,21 @@ body{
     }
     #slide-maze-runner{
         content: url("../img/maze_runner/fondo.jpg");
+    }
+    #slide-it{
+        content: url("../img/it/it.jpg");
+    }
+    #slide-juegos-hambre{
+        content: url("../img/juegos/horizontal.jpg");
+    }
+    #slide-leyenda{
+        content: url("../img/leyenda/4.avif");
+    }
+    #slide-matilda{
+        content: url("../img/matilda/2_hori.webp");
+    }
+    #slide-señor-anillos{
+        content: url("../img/lord/horizontal.jpg");
     }
     .sidebar h1{
         order: 1;
