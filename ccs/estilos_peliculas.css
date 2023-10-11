@@ -29,7 +29,7 @@ body{
     background-image: url(../img/matilda/horizo.jpeg);
 }
 .bg-leyenda{
-    background-image: url(../img/leyenda/fondo.jpg);
+    background-image: linear-gradient(to right, #08080885, #08080881), url(../img/leyenda/fondo.jpg);
 }
 .bg-juegos-hambre{
     background-image: url(../img/juegos/fondo.jpg);
