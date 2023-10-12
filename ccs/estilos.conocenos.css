@@ -1,0 +1,129 @@
+
+/** MAQUETADO DE LA PÁGINA PARA PANTALLA DE COMPU*/
+*{
+    margin:0px;
+   
+}
+.index{
+    background: linear-gradient(to right, #080808d0, #080808de), url(../img/fondo-index.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.contenedor{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    display: grid;
+    grid-template: auto auto auto auto auto auto / 40% 40% 1fr;
+    grid-template-areas:"header header header"
+                        "fila1 fila1 aside"
+                        "fila2 fila2 aside"
+                        "fila3 fila3 aside"
+                        "fila4 fila4 aside"
+                        "footer footer footer";
+}
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+}
+
+.menu{
+    /*Estilo para resetear los margenes y viñetas*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 600px;
+    padding: .4em;
+}
+.item{
+    list-style: none;
+}
+.link {
+    color: white;
+    text-decoration: none;
+}
+.user{
+    list-style: none;
+    cursor: pointer;
+}
+.hamburger{
+    cursor: pointer;
+    display:none;
+}
+.fa-solid{
+    font-size:1.3rem ;
+}
+
+.fila1{
+    grid-area: fila1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+    margin-left: 4em;
+}
+.fila1 h2{
+    text-align: center;
+}
+.fila{
+    background-color: rgba(88, 88, 90, 0.5);
+    width: 80%;
+    height: 16em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+.filaimg img{
+    width: 45%;
+    text-align: center;
+    border-radius: 200px;
+}
+.descripcion{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fila2{
+    grid-area: fila2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-left: 1.5em;
+}
+
+
+.fila3{
+    grid-area: fila3;
+}
+.fila4{
+    grid-area: fila4;
+}
+.footer{
+    grid-area: footer;width: 100vw;
+    display: flex;
+    margin-top: 2.5em;
+    padding: .5em;
+    justify-content: space-around;
+}
+.redes {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+.tecno {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
