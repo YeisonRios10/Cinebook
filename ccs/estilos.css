@@ -55,6 +55,36 @@
 .fa-solid{
     font-size:1.3rem ;
 }
+/*? = = = = = E S T I L O   D E L   P O P U P = = = = = */
+#popup {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff; 
+    border: 1px solid #0074D9;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px; 
+}
+
+#popup .description {
+    font-size: 16px; 
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#popup img {
+    width: 100%;
+    height: auto; 
+}
+
+#title:hover + #popup {
+    display: block; 
+}
 
 /*? = = = = = E S T I L O   D E L   C A R R U S E L = = = = = */
 .carrusel{
@@ -120,6 +150,10 @@
     border: 1px solid #0074D9;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    max-width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .link-peliculas:hover{
     background-color: #0056b3;
@@ -244,7 +278,39 @@
     display: flex;
     justify-content: space-around;
 }
+/*? = = = = = E S T I L O    D E L   B O T O N   S C R O L L  = = = = = */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5D6D7E;
+    color: #F39C12;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s; /* Animación al aparecer */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-family: "Tu Fuente Personalizada";
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #283747 ;
+    color: #F39C12; /* Cambio de color al pasar el ratón */
+    transform: scale(1.1); /* Aumento de tamaño al pasar el ratón */
+    opacity: 0.9; /* Transparencia */
+    transition: all 0.3s; /* Animación al pasar el ratón */
+    z-index: 999; /* Asegura que esté por encima del contenido */
+  }
+  
+  #scrollToTopBtn::before {
+    content: "\2191"; /* Código de la flecha hacia arriba */
+    font-size: 24px; /* Tamaño del ícono */
+  }
 
+  
 /**  Media query  para pantalla de 768px TABLET*/
 @media  (max-width: 768px) {
     .contenedor{
