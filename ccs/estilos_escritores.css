@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+#bg-escritor {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.alicia{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/alicia-libro.webp);
+    
+}
+.potter{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-harry.webp);
+    
+}
+.it{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-it.webp);
+    
+}
+.leyenda{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-soy-leyenda-.jpg);
+    
+}
+.maze{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-correr_o_morir.jpeg);
+    
+}
+.juegos{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo_juegos.webp);
+    
+}
+.matilda{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-matilda.jpg);
+    
+}
+.anillos{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/el-senor-de-los-anillos.jpg);
+    
+}
+
+
+.contenedor {
+    max-width: 1300px;
+    margin: 20px auto;
+    display: grid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    grid-gap: 20px;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: repeat(auto);
+
+    grid-template-areas: "header header header header"
+                         "contenido contenido contenido sidebar"
+                         "card-1 card-2 card-3 card-4"
+                         "footer footer footer footer";
+
+}
+/** = = = = = E S T I L O   D E L   M E N U = = = = = */
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+/* inicio estilos menú */
+.contenedor .header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+    background-color: transparent;
+}
+.menu{
+    /*Estilo para resetear los margenes y viñetas*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 600px;
+    padding: .4em;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Agrega una transición suave al cambio de color */
+}
+
+.menu a:hover {
+    color: #F39C12; /* Cambia el color al pasar el mouse */
+}
+.item{
+    list-style: none;
+}
+.link {
+    color: white;
+    text-decoration: none;
+}
+.user{
+    list-style: none;
+}
+.hamburger{
+    cursor: pointer;
+    display:none;
+}
+.fa-solid{
+    font-size:1.3rem ;
+}
+/* fin estilos menú */
+.contenedor .sidebar{
+ background-color: transparent;
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ flex-direction: column;
+ grid-area: sidebar;
+}
+.sidebar .imagen{
+    width: 100%;
+    height: auto;
+    margin-bottom: 3%;
+}
+
+.contenedor .contenido{
+    background-color: rgba(0,0,6,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    grid-area: contenido;
+}
+.link-peli a{
+    text-decoration: none;
+    color: #1ba4b6;
+}
+.link-peli a:hover {
+    color: #F39C12; /* Cambia el color al pasar el mouse */
+}
+.contenedor .trailer{
+    background-color: transparent;
+    text-align: center;
+    min-height: 500px;
+    grid-area: trailer;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.contenedor .card-1,
+.contenedor .card-2,
+.contenedor .card-3,
+.contenedor .card-4{
+    background-color: transparent;
+    color: #000;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+.contenedor .card-1{
+    grid-area: card-1;
+    position: relative;
+}
+.contenedor .card-2{
+    grid-area: card-2;
+    position: relative;
+}
+.contenedor .card-3{
+    grid-area: card-3;
+    position: relative;
+}
+
+.contenedor .card-4{
+    grid-area: card-4;
+    position: relative;
+    
+}
+/* Estilo para el botón (oculto por defecto) */
+.boton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: #0074D9;
+    color: #fff;
+    text-decoration: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+.boton:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+  /* Estilo para mostrar el botón al pasar el ratón por encima de la tarjeta */
+  .card-1:hover .boton, .card-2:hover .boton,.card-3:hover .boton,.card-4:hover .boton {
+    display: inline-block;
+  }
+  
+/*? = = = = = E S T I L O    D E L   F O O T E R  = = = = = */
+.contenedor .footer{
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    grid-area: footer;
+    display: flex;
+    margin-top: 2.5em;
+    padding: .5em;
+    justify-content: space-around;
+}
+.redes {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+.tecno {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor {
+        grid-template-areas: "header header header header"
+                            "contenido contenido sidebar sidebar "
+                            "trailer trailer trailer trailer"
+                            "footer footer footer footer";
+    }
+    /* Agrega esto para ocultar las cards en pantallas más pequeñas */
+    .contenedor .card-1,
+    .contenedor .card-2,
+    .contenedor .card-3,
+    .contenedor .card-4 {
+        display: none;
+    }
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    .contenedor {
+        grid-template-areas: "header header header header"
+                            "sidebar sidebar sidebar sidebar"
+                            "contenido contenido contenido contenido"
+                            "trailer trailer trailer trailer"
+                            "footer footer footer footer";
+    }
+    /* Agrega esto para ocultar las cards en pantallas más pequeñas */
+    .contenedor .card-1,
+    .contenedor .card-2,
+    .contenedor .card-3,
+    .contenedor .card-4 {
+        display: none;
+    }
+    .menu{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transition: transform .8s;
+        transform: translateY(-122%);
+    }
+    .item{
+        margin-top: 0.5em;
+    }
+    
+    .user{
+        margin-right: 2.5em;
+    }
+    .hamburger{
+        
+        display: inherit;
+        position: absolute;
+        top:2.5rem;
+        right:1em;
+    }
+
+    .hamburger-show{
+        transform: translateY(0);
+    }
+
+    .sidebar{
+        width: 75vw;
+        margin-left: 2.5em;
+    }
+    .oculto{
+        display: none;
+    }
+    .redes{
+        width: 80vw;
+        justify-content: space-around;
+        
+    }
+    .tecno{
+        display: none;
+    }
+    #slide-rowling{
+        content: url('../img/escritores/j-k-rowling-potter-2.jpg');
+    }
+    #slide-carrol{
+        content: url("../img/escritores/carroll-Alicia-maravilla-1.jpg");
+    }
+    #slide-it{
+        content: url("../img/escritores/king-it3.jpeg");
+    }
+    #slide-leyenda{
+        content: url("../img/escritores/richard-souy-leyenda.jpeg");
+    }
+    #slide-maze{
+        content: url("../img/escritores/james_Dashner_2.jpeg");
+    }
+    #slide-collins{
+        content: url("../img/escritores/susan-collins.webp");
+    }
+    #slide-matilda{
+        content: url("../img/escritores/Roald_Dahl-2.jpg");
+    }
+    #slide-tolkien{
+        content: url("../img/escritores/jrr-tolkien.png");
+    }
+    .sidebar h1{
+        order: 1;
+        margin-bottom: 4%;
+    }
+    .sidebar img{
+        order: 2;
+    }
+    .contenido h1{
+        display: none;
+    }
+ 
+}
