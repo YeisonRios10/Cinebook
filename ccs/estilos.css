@@ -251,7 +251,39 @@
     display: flex;
     justify-content: space-around;
 }
+/*? = = = = = E S T I L O    D E L   B O T O N   S C R O L L  = = = = = */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 27px;
+    right: 20px;
+    background-color: #5D6D7E;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s; /* Animación al aparecer */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+    font-family: "Tu Fuente Personalizada";
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #283747 ;
+    color: #F39C12; /* Cambio de color al pasar el ratón */
+    transform: scale(1.1); /* Aumento de tamaño al pasar el ratón */
+    opacity: 0.9; /* Transparencia */
+    transition: all 0.3s; /* Animación al pasar el ratón */
+    z-index: 999; /* Asegura que esté por encima del contenido */
+  }
+  
+  #scrollToTopBtn::before {
+    content: "\2191"; /* Código de la flecha hacia arriba */
+    font-size: 20px; /* Tamaño del ícono */
+  }
 
+  
 /**  Media query  para pantalla de 768px TABLET*/
 @media  (max-width: 768px) {
     .contenedor{
@@ -289,19 +321,17 @@
         flex-direction: column;
         padding-top: 1em;
         margin-left: .5em;
-        /* display: none; */
+        display: none;
     }
     .destacadas{
         width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
+        
     }
     .destacada{
-        flex-direction: column;
         font-size: .9em;
         }
         .destacada .desta{
-        width:90%;
+        width:50%;
         height: 70%;
         object-fit: cover;
     }
@@ -320,7 +350,7 @@
         grid-template:  "header" 
                          "carrusel"
                          "pelis"
-                         "marquesina"
+                         "pelis2"
                          "footer";
     }
    
@@ -360,7 +390,7 @@
         height: 86%;
     }
     
-    .pelis{
+    .pelis , .pelis2{
         width: 100vw;
         flex-direction: row;
         flex-wrap: wrap;
@@ -375,14 +405,8 @@
         width: 95%;
         height: 100%;
     }
-    .aside{
+    .aside , .marquesina{
         display: none;
-    }
-    .marquesina{
-        display: none;
-    }
-    .pelis2{
-        display:none;
     }
     .footer{
         width: 96vw;

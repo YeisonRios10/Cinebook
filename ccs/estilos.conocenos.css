@@ -2,19 +2,28 @@
 /** MAQUETADO DE LA PÁGINA PARA PANTALLA DE COMPU*/
 *{
     margin:0px;
+    padding: 0;
    
+}
+body{
+   color: whitesmoke;
+    font-size: 16px;
 }
 .index{
     background: linear-gradient(to right, #080808d0, #080808de), url(../img/fondo-index.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: Arial, sans-serif;
 }
 .contenedor{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
     display: grid;
+    width: 95%;
+    max-width: 1300px;
+    display: grid;
+    grid-gap: 20px;
     grid-template: auto auto auto auto auto auto / 40% 40% 1fr;
+    grid-template-rows: repeat(auto);
     grid-template-areas:"header header header"
                         "fila1 fila1 aside"
                         "fila2 fila2 aside"
@@ -58,14 +67,15 @@
     font-size:1.3rem ;
 }
 
-.fila1{
+.fila1, .fila2, .fila3{
     grid-area: fila1;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 2em;
-    margin-left: 4em;
+    align-items: center;
+    padding: 2em;
+    margin-top: 1em;
 }
 .fila1 h2{
     text-align: center;
@@ -73,43 +83,72 @@
 .fila{
     background-color: rgba(88, 88, 90, 0.5);
     width: 80%;
-    height: 16em;
+    height: 17em;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 2em;
     margin-left: 2em;
 }
+.filaimg{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .filaimg img{
-    width: 45%;
-    text-align: center;
+    width: 65%;
     border-radius: 200px;
 }
 .descripcion{
-    width: 50%;
+    width: 45%;
     height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-left: .9em;
+}
+
+.enlaces{
+    display: flex;
+    width: 4em;
+    justify-content: space-between;
 }
 
 .fila2{
     grid-area: fila2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 2em;
-    margin-left: 1.5em;
 }
-
-
 .fila3{
     grid-area: fila3;
 }
 .fila4{
     grid-area: fila4;
 }
+
+.aside{
+    grid-area: aside;
+    width: 18.6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2.5em;
+}
+.destacada{
+    width: 100%;
+    height: 34vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2em;
+    }
+.destacada .desta{
+        width:60%;
+        height: 90%;
+}
+
 .footer{
     grid-area: footer;width: 100vw;
     display: flex;
@@ -126,4 +165,26 @@
     width: 50%;
     display: flex;
     justify-content: space-around;
+}
+
+@media (max-widh: 768px){
+    .contenedor{
+        grid-template-areas:"header header"
+                            "fila1 fila1"
+                            "fila2 fila2"
+                            "fila3 fila3"
+                            "fila4 fila4"
+                            "footer footer";
+    }
+    .menu{
+        width: 450px;
+        background-color: beige;
+    }
+    .aside{
+        display: none;
+    }
+    .fila1 {
+        background-color: aqua;
+        text-align: center;
+    }
 }
