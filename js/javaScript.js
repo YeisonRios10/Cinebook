@@ -98,3 +98,83 @@ function enviarAlerta(){
     alert("Gracias x contactarnos, en breve te responderemos")
     location.href = "../index.html"
 }
+
+//* Api MovieDb
+
+const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MTM3YTkzMzYyMDBmNjFkN2Y2OTU1NDY3M2VmNjg0OCIsInN1YiI6IjY1MmIzYjFjMGNiMzM1MTZmZDQ5YjIzYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jJ4L_mZesC8wfIBOYE2Zif-qmIvMeaqJ-OtWxi37Tuc'
+    }
+  };
+  
+
+  //la id 12155, es la pelicula alicia en el pais de las maravillas, esto seria la imagen
+ 
+ //imagen de inicio
+  fetch('https://api.themoviedb.org/3/movie/12155/images', options)
+  .then(movieData => {
+    const baseUrl = "https://image.tmdb.org/t/p/original/4U9hkIXymZugDWfixlR7dh57g2G.jpg"
+    const imagen= document.querySelector('.tarjeta img');  
+    imagen.src = baseUrl;  
+  })
+
+//imagen de pelicula_alicia
+  fetch('https://api.themoviedb.org/3/movie/12155/images', options)
+  .then(movieData => {
+    const baseUrl = "https://image.tmdb.org/t/p/original/4U9hkIXymZugDWfixlR7dh57g2G.jpg"
+    const imagenPortada = document.querySelector('#slide-alicia');
+    imagenPortada.src = baseUrl 
+  })
+
+
+  
+
+
+  
+   
+// esto seria la descripcion y los videos
+
+fetch('https://api.themoviedb.org/3/movie/12155?language=es', options)
+.then(response => response.json())
+.then(movieData => {
+    const descripcion = movieData.overview
+    const año_de_lanzamiento = movieData.release_date
+    const duracion = movieData.runtime
+    const tituloOriginal = movieData.original_title
+    const generos = movieData.genres
+    document.querySelector("#titulo_original").innerHTML = tituloOriginal
+    document.querySelector("#descripcion").innerHTML = descripcion
+    document.querySelector("#año_de_lanzamiento").innerHTML = año_de_lanzamiento
+    document.querySelector("#duracion").innerHTML = duracion
+
+    const listaGeneros = generos.map(generos => generos.name).join(",")
+  
+    document.querySelector("#generos").innerHTML = listaGeneros
+
+
+})
+.catch(err => console.error(err));
+
+
+
+  
+
+
+  //esto me permite conseguir la lista de array q se llama backdrops y me trae todas las portadas q hay de alicia 
+
+  fetch('https://api.themoviedb.org/3/movie/12155/images', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+
+
+  fetch('https://api.themoviedb.org/3/movie/12155?language=en-US', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+
+  
