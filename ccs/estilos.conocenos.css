@@ -106,7 +106,7 @@ body{
     display: block; 
 }
 
-
+/*? = = = = = E S T I L O   C O N O C E N O S = = = = = */
 .fila1, .fila2, .fila3{
     grid-area: fila1;
     width: 90%;
@@ -167,6 +167,7 @@ body{
     grid-area: fila4;
 }
 
+/*? = = = = = E S T I L O   D E L   A S I D E  = = = = = */
 .aside{
     grid-area: aside;
     width: 21vw;
@@ -196,6 +197,38 @@ body{
         height: 90%;
 }
 
+/*? = = = = = E S T I L O    D E L   B O T O N   S C R O L L  = = = = = */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 27px;
+    right: 20px;
+    background-color: rgba(0,0,6,0.5);
+    color: #fcfcfc;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s; /* Animación al aparecer */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #283747 ;
+    color: #F39C12; /* Cambio de color al pasar el ratón */
+    transform: scale(1.1); /* Aumento de tamaño al pasar el ratón */
+    opacity: 0.9; /* Transparencia */
+    transition: all 0.3s; /* Animación al pasar el ratón */
+    z-index: 999; /* Asegura que esté por encima del contenido */
+  }
+  
+  #scrollToTopBtn::before {
+    content: "\2191"; /* Código de la flecha hacia arriba */
+    font-size: 24px; /* Tamaño del ícono */
+  }
+
+  /*? = = = = = E S T I L O    D E L   F O O T E R  = = = = = */
 .footer{
     grid-area: footer;width: 100vw;
     display: flex;

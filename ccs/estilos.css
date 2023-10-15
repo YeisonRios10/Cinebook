@@ -160,7 +160,7 @@
     padding: 5px 10px;
     text-decoration: none;
     color: #fff;
-    background-color: #242222;
+    /* background-color: #242222; */
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     max-width: 75%;
@@ -169,15 +169,14 @@
     text-overflow: ellipsis;
 }
 .link-peliculas:hover{
-    background-color: #808285;
-    color: #fff;
+    background-color: rgba(35, 35, 36, 0.623);
     transform: scale(1.05); /* Aumenta el tamaño del enlace en un 5% */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra suave */
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .link-peliculas:active{
-    background-color: #004080;
-    border-color: #004080;
+    /* background-color: #004080;
+    border-color: #004080; */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .tarjeta{
@@ -227,14 +226,15 @@
 /** = = = = = E S T I L O   D E  M A R Q U E S I N A = = = = = */
 .marquesina{
     grid-area: marquesina;
-    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
 }
 .slider{
     height: 15vh;
     overflow: hidden;   
     width: 80vw;
-    height: 20vh;
-    overflow: hidden; 
+    height: 18vh;
+    
 }
 .slider .slide-track{
     display: flex;
@@ -298,7 +298,7 @@
     position: fixed;
     bottom: 27px;
     right: 20px;
-    background-color: #5D6D7E;
+    background-color: rgba(0,0,6,0.5);
     color: #fcfcfc;
     border: none;
     border-radius: 50%;
@@ -444,9 +444,8 @@
     }
     .tarjeta img{
         width: 95%;
-        height: 100%;
     }
-    .aside , .marquesina, .tecno{
+    .aside , .marquesina,  .tecno{
         display: none;
     }
     .footer{
