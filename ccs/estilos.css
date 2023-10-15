@@ -41,6 +41,15 @@
     width: 600px;
     padding: .4em;
 }
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Agrega una transición suave al cambio de color */
+}
+
+.menu a:hover {
+    color: #F39C12; /* Cambia el color al pasar el mouse */
+}
 .item{
     list-style: none;
 }
@@ -67,7 +76,7 @@
     width: 200px;
     background-color: rgba(0, 0, 0, 0.7); 
     color: #fff; 
-    border: 1px solid #0074D9;
+    border: 1px solid #ffffff;
     padding: 10px;
     display: none;
     z-index: 999;
@@ -151,7 +160,7 @@
     padding: 5px 10px;
     text-decoration: none;
     color: #fff;
-    background-color: #242222;
+    /* background-color: #242222; */
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     max-width: 75%;
@@ -160,15 +169,14 @@
     text-overflow: ellipsis;
 }
 .link-peliculas:hover{
-    background-color: #808285;
-    color: #fff;
+    background-color: rgba(35, 35, 36, 0.623);
     transform: scale(1.05); /* Aumenta el tamaño del enlace en un 5% */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra suave */
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .link-peliculas:active{
-    background-color: #004080;
-    border-color: #004080;
+    /* background-color: #004080;
+    border-color: #004080; */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .tarjeta{
@@ -189,44 +197,44 @@
 /*? = = = = = E S T I L O   D E L   A S I D E  = = = = = */
 .aside{
     grid-area: aside;
-    width: 18.6vw;
+    width: 21vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
 }
 .destacadas{
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 .destacada{
-    width: 100%;
+    width: 90%;
     height: 34vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    margin-top: .5em;
+    justify-content: center;
+    margin-top: 1em;
     }
 .destacada .desta{
-    width:95%;
-    height: 88%;
+    width:60%;
+    height: 90%;
 }
 
 /** = = = = = E S T I L O   D E  M A R Q U E S I N A = = = = = */
 .marquesina{
     grid-area: marquesina;
-    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
 }
 .slider{
     height: 15vh;
     overflow: hidden;   
     width: 80vw;
-    height: 20vh;
-    overflow: hidden; 
+    height: 18vh;
+    
 }
 .slider .slide-track{
     display: flex;
@@ -288,10 +296,10 @@
 /*? = = = = = E S T I L O    D E L   B O T O N   S C R O L L  = = = = = */
 #scrollToTopBtn {
     position: fixed;
-    bottom: 20px;
+    bottom: 27px;
     right: 20px;
-    background-color: #5D6D7E;
-    color: #F39C12;
+    background-color: rgba(0,0,6,0.5);
+    color: #fcfcfc;
     border: none;
     border-radius: 50%;
     padding: 10px 20px;
@@ -300,7 +308,6 @@
     display: none;
     transition: all 0.3s; /* Animación al aparecer */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
-    font-family: "Tu Fuente Personalizada";
   }
   
   #scrollToTopBtn:hover {
@@ -350,25 +357,31 @@
     .tarjeta{
         text-align: center;
     }
+    .tarjeta img{
+        height: 18em;
+    }
     .aside{
-        width: 95vw;
+        width: 100vw;
         flex-direction: column;
-        padding-top: 1em;
-        margin-left: .5em;
-        /* display: none; */
+        padding-top: 2.5em;
     }
     .destacadas{
-        width: 100%;
+        width: 100vw;
+        margin-top: 3.5em;
+        display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .destacada{
+        width: 200px;
+        margin: .5em; /* Añade margen para separar las tarjetas */
+        display: flex;
         flex-direction: column;
-        font-size: .9em;
+        text-align: center;
         }
         .destacada .desta{
         width:90%;
-        height: 70%;
+        height: auto;
         object-fit: cover;
     }
     .slider{
@@ -376,6 +389,7 @@
     }
     .footer{
         width: 96vw;
+        margin-top: 5em;
     }
 }
 
@@ -386,13 +400,11 @@
         grid-template:  "header" 
                          "carrusel"
                          "pelis"
-                         "marquesina"
+                         "pelis2"
                          "footer";
     }
-   
     
     .menu{
-        
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
@@ -426,7 +438,7 @@
         height: 86%;
     }
     
-    .pelis{
+    .pelis, .pelis2{
         width: 100vw;
         flex-direction: row;
         flex-wrap: wrap;
@@ -439,16 +451,9 @@
     }
     .tarjeta img{
         width: 95%;
-        height: 100%;
     }
-    .aside{
+    .aside , .marquesina,  .tecno{
         display: none;
-    }
-    .marquesina{
-        display: none;
-    }
-    .pelis2{
-        display:none;
     }
     .footer{
         width: 96vw;
@@ -456,11 +461,5 @@
     .redes{
         width: 80vw;
         justify-content: space-around;
-        
-    }
-    .tecno{
-        display: none;
     }
 }
-
-
