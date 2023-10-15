@@ -321,6 +321,8 @@ body{
     .enlaces{
         padding: 1em;
     }
-    
-   
+    .redes{
+        width: 80vw;
+        justify-content: space-around;
+    }
 }
