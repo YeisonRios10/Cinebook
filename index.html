@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ccs/bootstrap.css">
+    <link rel="stylesheet" href="ccs/bootstrap.min.css">
     <link rel="stylesheet" href="ccs/estilos.css">
     <script src="https://kit.fontawesome.com/7f7fe5557e.js" crossorigin="anonymous"></script>
+    
     <link rel="shortcut icon" href="libro.ico">
     <title>Bibliocinéfilos</title>
 </head>
@@ -36,7 +39,7 @@
                 </ul>
             </nav> 
             <li class="user">
-                <i class="fa-solid fa-user " style="color: #ffffff;" title="Regístrate o Inicia sesión"></i>
+                <i class="fa-solid fa-user " data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: #ffffff;" title="Regístrate o Inicia sesión"></i>
             </li>
             <div class="hamburger" id="hamburger">
                 <i class="fa-solid fa-bars"></i>
@@ -46,7 +49,44 @@
             <p class="description">"Explora el mundo mágico del cine a través de las páginas de la literatura"</p>
             <img src="img/popup.jpg" alt="Descripción de la imagen">
         </div>
-        
+
+        <!-- Modal sesion -->
+         <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="col-12 user-img">
+                <h1 class="modal-title fs-2 ">Login</h1>
+                <img src="../img/avatar/avatar1.png" alt="">
+            </div>
+            <form method="post" action="" class="col-12" onsubmit="return validarFormulario2(event)">
+                <div class="form-group correo">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" class="form-control" aria-describedby="emailHelp" placeholder="Usuario o Correo" required>
+                    <i class="fa-brands fa-mailchimp fa-xl"></i>
+                </div>
+                <div class="form-group pass">
+                    <label for="contrasenia">Contraseña</label>
+                    <input type="password" id="contrasenia" name="contrasenia" class="form-control" placeholder="Contraseña" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="form-control" placeholder="Fecha de nacimiento" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3"><i class="fas fa-sign-in-alt"></i> Enviar</button>
+            </form>  
+            <div class="col-12 forgot">
+                <a href="#">Recordar Contraseña</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
         
         <!--? ======================================================================= -->
         <!--? ======================= C  A  R  R  U  S  E  L  ======================= -->
@@ -177,5 +217,6 @@
     </div>
     <script src="js/javaScript.js"></script>
     <script src="js/apis.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

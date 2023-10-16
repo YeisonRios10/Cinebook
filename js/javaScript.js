@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.addEventListener('click', ()=>{ //al menu hamburguesa al hacer click le agrego o le quito la clase para mostrar el menu
          menu.classList.toggle('hamburger-show');
         });
+
+
 /* ==============P O P U P ========================================  */
         const title = document.getElementById('title');
         const popup = document.getElementById('popup');
