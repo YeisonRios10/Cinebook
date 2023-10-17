@@ -32,7 +32,6 @@ const cargarPeliculas = async()   =>  {
 }
 
 cargarPeliculas();
-
       
       // // Define una función llamada traerDatosAPI que realizará una solicitud a una API.
         // function traerDatosAPI() {
@@ -76,51 +75,3 @@ cargarPeliculas();
         //                 </div>`;
         //         });
         // }
-    /* ==============S E S I O N ========================================  */
-    function validarFormulario2(e) {
-        e.preventDefault();
-    
-        let correo = document.getElementById('correo').value;
-        let contrasenia = document.getElementById('contrasenia').value;
-        let fechaNacimiento = document.getElementById('fecha-nacimiento').value;
-    
-        let validarCorreo = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/;
-        let validarContrasenia = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{8,}/;
-    
-        let errorText = "";
-    
-        if (correo === "") {
-            errorText += 'El campo Correo es obligatorio\n';
-        } else if (!validarCorreo.test(correo)) {
-            errorText += 'El campo Correo no tiene un formato válido\n';
-        }
-    
-        if (contrasenia === "") {
-            errorText += 'El campo Contraseña es obligatorio\n';
-        } else if (!validarContrasenia.test(contrasenia)) {
-            errorText += 'La contraseña debe tener al menos 8 caracteres, con al menos un dígito, una mayúscula, una minúscula y un carácter especial.\n';
-        }
-    
-        if (fechaNacimiento === "") {
-            errorText += 'El campo Fecha de nacimiento es obligatorio\n';
-        } else {
-            let fechaNac = new Date(fechaNacimiento);
-            let hoy = new Date();
-            let edad = hoy.getFullYear() - fechaNac.getFullYear();
-    
-            if (edad < 18) {
-                errorText += 'Debes ser mayor de 18 años para registrarte.\n';
-            }
-        }
-    
-        if (errorText !== "") {
-            alert(errorText);
-            return false;
-        } else {
-            alert('Su login fue exitoso.');
-            document.getElementById('correo').value = "";
-            document.getElementById('contrasenia').value = "";
-            document.getElementById('fecha-nacimiento').value = "";
-            return false;
-        }
-      }

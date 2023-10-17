@@ -238,6 +238,37 @@ body{
     justify-content: space-around;
 }
 
+/*? = = = = = E S T I L O    D E L   B O T O N   S C R O L L  = = = = = */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 27px;
+    right: 20px;
+    background-color: rgba(0,0,6,0.5);
+    color: #fcfcfc;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s; /* Animación al aparecer */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #283747 ;
+    color: #F39C12; /* Cambio de color al pasar el ratón */
+    transform: scale(1.1); /* Aumento de tamaño al pasar el ratón */
+    opacity: 0.9; /* Transparencia */
+    transition: all 0.3s; /* Animación al pasar el ratón */
+    z-index: 999; /* Asegura que esté por encima del contenido */
+  }
+  
+  #scrollToTopBtn::before {
+    content: "\2191"; /* Código de la flecha hacia arriba */
+    font-size: 24px; /* Tamaño del ícono */
+  }
+
 @media screen and (max-width: 768px){
     .contenedor {
         grid-template-areas: "header header header header"
@@ -281,7 +312,7 @@ body{
         align-items: flex-start;
         justify-content: flex-start;
         transition: transform .8s;
-        transform: translateY(-100%);
+        transform: translateY(-127%);
     }
     .item{
         margin-top: 0.2em;
@@ -293,7 +324,7 @@ body{
     .hamburger{
         display: inherit;
         position: absolute;
-        top:2.5rem;
+        top:3.5rem;
         right:1em;
     }
 

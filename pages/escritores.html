@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ccs/bootstrap.css">
-    <link rel="stylesheet" href="ccs/bootstrap.min.css">
-    <link rel="stylesheet" href="ccs/estilos.css">
+    <link rel="stylesheet" href="../ccs/estilos.css">
     <script src="https://kit.fontawesome.com/7f7fe5557e.js" crossorigin="anonymous"></script>
-    
     <link rel="shortcut icon" href="libro.ico">
     <title>Bibliocinéfilos</title>
 </head>
@@ -22,10 +19,10 @@
             <nav class="nave">
                 <ul class="menu" id="menu">
                     <li class="item">
-                        <a href="#" class="link">Inicio</a>
+                        <a href="../index.html" class="link">Inicio</a>
                     </li>
                     <li class="item">
-                        <a href="../pages/escritores.html" class="link">Escritores</a>
+                        <a href="#" class="link">Escritores</a>
                     </li>
                      <!-- <li class="item">
                         <a href="#" class="link">Géneros</a>
@@ -39,7 +36,7 @@
                 </ul>
             </nav> 
             <li class="user">
-                <i class="fa-solid fa-user " data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: #ffffff;" title="Regístrate o Inicia sesión"></i>
+                <i class="fa-solid fa-user " style="color: #ffffff;" title="Regístrate o Inicia sesión"></i>
             </li>
             <div class="hamburger" id="hamburger">
                 <i class="fa-solid fa-bars"></i>
@@ -47,56 +44,19 @@
         </header>
         <div id="popup" class="hidden">
             <p class="description">"Explora el mundo mágico del cine a través de las páginas de la literatura"</p>
-            <img src="img/popup.jpg" alt="Descripción de la imagen">
+            <img src="../img/popup.jpg" alt="Descripción de la imagen">
         </div>
-
-        <!-- Modal sesion -->
-         <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="col-12 user-img">
-                <h1 class="modal-title fs-2 ">Login</h1>
-                <img src="../img/avatar/avatar1.png" alt="">
-            </div>
-            <form method="post" action="" class="col-12" onsubmit="return validarFormulario2(event)">
-                <div class="form-group correo">
-                    <label for="correo">Correo Electrónico</label>
-                    <input type="email" id="correo" class="form-control" aria-describedby="emailHelp" placeholder="Usuario o Correo" required>
-                    <i class="fa-brands fa-mailchimp fa-xl"></i>
-                </div>
-                <div class="form-group pass">
-                    <label for="contrasenia">Contraseña</label>
-                    <input type="password" id="contrasenia" name="contrasenia" class="form-control" placeholder="Contraseña" required>
-                    <i class="fa-solid fa-lock"></i>
-                </div>
-                <div class="form-group">
-                    <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="form-control" placeholder="Fecha de nacimiento" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100 mt-3"><i class="fas fa-sign-in-alt"></i> Enviar</button>
-            </form>  
-            <div class="col-12 forgot">
-                <a href="#">Recordar Contraseña</a>
-            </div>
-        </div>
-    </div>
-  </div>
-  </div>
+        
         
         <!--? ======================================================================= -->
         <!--? ======================= C  A  R  R  U  S  E  L  ======================= -->
         <!--? ======================================================================= -->
         
-        <div class="carrusel">
+       <div class="carrusel">
             <div class="grande">
-                <img class="imagen" src="img/juegos/fondo.jpg" alt="img" >
-                <img class="imagen" src="img/it/it-cara-globo.webp" alt="img" >
-                <img class="imagen" src="img/harry/harry.jpg" alt="img" > 
+                <img class="imagen" src="../img/juegos/fondo.jpg" alt="img" >
+                <img class="imagen" src="../img/it/it-cara-globo.webp" alt="img" >
+                <img class="imagen" src="../img/harry/harry.jpg" alt="img" > 
             </div>
             <ul class="puntos">
                 <li class="punto activo"><i class="fa-solid fa-circle" style="color: #ffffff;"></i></li>
@@ -112,20 +72,20 @@
 
         <div class="pelis">
            <div class="tarjeta">
-            <img src="img/alicia/poster-alicia.jpg" alt="Alicia en el Pais de las Maravillas">
-            <a class="link-peliculas" href="pages/pelicula_alicia.html">Alice in Wonderland</a>
+            <img src="../img/escritores/lewis-carroll.jpeg" alt="Alicia en el Pais de las Maravillas">
+            <a class="link-peliculas" href="escritor_alicia.html">Lewis Carroll</a>
            </div>
            <div class="tarjeta">
-            <img src="img/harry/camara.jpg" alt="Harry Potter La Cámara Secreta">
-            <a class="link-peliculas" href="pages/pelicula_harry.html">Harry Poter</a>
+            <img src="../img/escritores/j-k-rowling-potter.jpg" alt="Harry Potter La Cámara Secreta">
+            <a class="link-peliculas" href="escritor_harry.html">J K Rowling</a>
            </div>
            <div class="tarjeta">
-            <img src="img/it/it-eso.png" alt="IT (ESO)">
-            <a class="link-peliculas" href="pages/pelicula_it.html">IT</a>
+            <img src="../img/escritores/stephen-king.webp" alt="IT (ESO)">
+            <a class="link-peliculas" href="escritor_it.html">Stephen King</a>
            </div>
            <div class="tarjeta">
-            <img src="img/leyenda/soy-leyenda.png" alt="Soy Leyenda">
-            <a class="link-peliculas" href="pages/pelicula_leyenda.html">Soy Leyenda</a>
+            <img src="../img/escritores/soy-leyeda-richard.webp" alt="Soy Leyenda">
+            <a class="link-peliculas" href="escritor_soy_leyenda.html">Richard Mathenson</a>
            </div>
         </div>
 
@@ -150,18 +110,18 @@
         <div class="marquesina">
             <div class="slider">
                 <div class="slide-track">
-                    <div class="slide"><img src="img/alicia/1.jpeg" alt=""></img></div>
-                    <div class="slide"><img src="img/harry/harry.jpg"  alt=""></img></div>
-                    <div class="slide"><img src="img/juegos/juegosdelhambre.webp" alt=""></img></div>
-                    <div class="slide"><img src="img/leyenda/legend.jpg" alt=""></img></div>
-                    <div class="slide"><img src="img/it/it.jpg" alt=""></img></div>
-                    <div class="slide"><img src="img/lord/losanillos.jpeg" alt=""></img></div>
-                    <div class="slide"><img src="img/alicia/1.jpeg" alt=""></img></div>
-                    <div class="slide"><img src="img/harry/harry.jpg"  alt=""></img></div>
-                    <div class="slide"><img src="img/juegos/juegosdelhambre.webp" alt=""></img></div>
-                    <div class="slide"><img src="img/leyenda/legend.jpg" alt=""></img></div>
-                    <div class="slide"><img src="img/it/it.jpg" alt=""></img></div>
-                    <div class="slide"><img src="img/lord/losanillos.jpeg" alt=""></img></div>
+                    <div class="slide"><img src="../img/alicia/1.jpeg" alt=""></img></div>
+                    <div class="slide"><img src="../img/harry/harry.jpg"  alt=""></img></div>
+                    <div class="slide"><img src="../img/juegos/juegosdelhambre.webp" alt=""></img></div>
+                    <div class="slide"><img src="../img/leyenda/legend.jpg" alt=""></img></div>
+                    <div class="slide"><img src="../img/it/it.jpg" alt=""></img></div>
+                    <div class="slide"><img src="../img/lord/losanillos.jpeg" alt=""></img></div>
+                    <div class="slide"><img src="../img/alicia/1.jpeg" alt=""></img></div>
+                    <div class="slide"><img src="../img/harry/harry.jpg"  alt=""></img></div>
+                    <div class="slide"><img src="../img/juegos/juegosdelhambre.webp" alt=""></img></div>
+                    <div class="slide"><img src="../img/leyenda/legend.jpg" alt=""></img></div>
+                    <div class="slide"><img src="../img/it/it.jpg" alt=""></img></div>
+                    <div class="slide"><img src="../img/lord/losanillos.jpeg" alt=""></img></div>
                 </div>
             </div>
     </div>
@@ -172,20 +132,20 @@
 
         <div class="pelis2">
             <div class="tarjeta">
-             <img src="img/maze_runner/1.jpg" alt="Maze Runner">
-             <a class="link-peliculas" href="pages/pelicula_maze_runner.html">Maze runner</a>
+             <img src="../img/escritores/James_Dashner-maze-runner-1.webp" alt="Maze Runner">
+             <a class="link-peliculas" href="escritor_maze_runner.html">James Dasher</a>
             </div>
             <div class="tarjeta">
-             <img src="img/lord/el señor de los anillos - la comunidad.jpg" alt="La Comunidad del Anillo">
-             <a class="link-peliculas" href="pages/pelicula_señor_anillos.html">La Comunidad del anillo</a>
+             <img src="../img/escritores/tolkien.jpg" alt="La Comunidad del Anillo">
+             <a class="link-peliculas" href="escritor_señor_anillos.html">J. R. R. Tolkien</a>
             </div>
             <div class="tarjeta">
-             <img src="img/matilda/matilda1.png" alt="Matilda">
-             <a class="link-peliculas" href="pages/pelicula_matilda.html">Matilda</a>
+             <img src="../img/escritores/Roald_Dahl.jpg" alt="Matilda">
+             <a class="link-peliculas" href="escritor_matilda.html">Roald Dahl</a>
             </div>
             <div class="tarjeta">
-             <img src="img/juegos/juegos-del-hambre.png" alt="Juegos del Hambre">
-             <a class="link-peliculas" href="pages/pelicula_juegos_hambre.html">Juegos del hambre</a>
+             <img src="../img/escritores/suzanne_collin2.jpg" alt="Juegos del Hambre">
+             <a class="link-peliculas" href="escritor_juegos_del_hambre.html">Suzanne Collins</a>
             </div>
          </div>
         <!--? ======================================================================= -->
@@ -209,19 +169,12 @@
                 <a href="https://www.w3.org/wiki/JavaScript_best_practices"><i class="fa-brands fa-js" style="color: #ffffff;" title="JavaScript"></i></a>
             </div>
         </div>
-        
-        
-        <!--! ======================================================================= -->
-        <!--! =====================  B O T O N  S C R O L L  ======================== -->
-        <!--! ======================================================================= -->
-
+        <!-- BOTÓN SCROLL -->
         <button id="scrollToTopBtn" title="Ir arriba"></button>
         </div>
         </div>
-        
     </div>
-    <script src="js/javaScript.js"></script>
-    <script src="js/apis.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="../js/javaScript.js"></script>
+    <script src="../js/apis.js"></script>
 </body>
 </html>
