@@ -98,7 +98,7 @@ cargarPeliculas();
         if (contrasenia === "") {
             errorText += 'El campo Contraseña es obligatorio\n';
         } else if (!validarContrasenia.test(contrasenia)) {
-            errorText += 'La contraseña debe tener al menos 8 caracteres y cumplir con los requisitos de seguridad.\n';
+            errorText += 'La contraseña debe tener al menos 8 caracteres, con al menos un dígito, una mayúscula, una minúscula y un carácter especial.\n';
         }
     
         if (fechaNacimiento === "") {
