@@ -11,7 +11,8 @@
     background-size: cover;
 }
 .contenedor{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
     color: white;
     display: grid;
     grid-template: auto auto auto auto auto auto / 27% 27% 27% 1fr;
@@ -209,7 +210,7 @@ font-size: 16px;
     transform: translateY(-50%);
 }
   
-/*? = = = = = E S T I L O   D E L   C A R R U S E L = = = = = */
+/*? = = = = = E S T I L O   D E L   C A R R U S E L = = = = = 
 .carrusel{
     grid-area: carrusel;
     width: 100%;
@@ -255,6 +256,51 @@ font-size: 16px;
 .punto.activo{
     background-color: rgb(70, 67, 67);
     border-radius: 200px 200px 200px 200px;
+}
+*/
+/*? = = = = = E S T I L O    G A L E R I A   E S C R I T O R E S  = = = = = */
+.carrusel{
+    grid-area: carrusel;
+    width: 98%;
+    height: 90vh;
+    margin:0 auto;
+    overflow: hidden;
+}
+section{
+    height: 85vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:0.5px solid gray;
+}
+
+section img{
+    width: 0px;
+    height:100%;
+    flex-grow: 1;/*que dentro de la caja flexible ocupe todo el espacio que pueda*/
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .5s ease;
+}
+
+section img:hover{
+    width: 30%;
+    opacity: 1;
+    filter:contrast(120%);
+}
+
+@media screen and (max-width: 768px){
+    section{
+        flex-wrap: wrap;
+    }
+    section img{
+        height: 80%;
+    }
+    section img:hover{
+        width: 70%;
+        
+    }
 }
 /*! = = = = = E S T I L O   P E L I C U L A   S E C C  1  = = = = = */
 .pelis{
