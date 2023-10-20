@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@100;200;400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -10,8 +11,12 @@ body{
     background-attachment: fixed;
     background-color: #000;
     color: whitesmoke;
-    font-family: Arial, sans-serif;
+    font-family: Lora, serif;
     font-size: 16px;
+    font-weight: 400;
+}
+h1, h2, h3{
+    font-weight: 400;
 }
 .bg-alicia{
     background-image: url(../img/alicia/alicia_fondo.jpg);

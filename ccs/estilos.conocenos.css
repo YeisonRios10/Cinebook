@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@100;200;400;700&display=swap');
 /** MAQUETADO DE LA PÁGINA PARA PANTALLA DE COMPU*/
 *{
     margin:0px;
@@ -7,15 +7,19 @@
 }
 body{
     color: whitesmoke;
-    font-family: Arial, sans-serif;
+    font-family: Lora, serif;
     font-size: 16px;
+    font-weight: 400;
+}
+h1, h2, h3{
+    font-weight: 700;
 }
 .index{
     background: linear-gradient(to right, #080808d0, #080808de), url(../img/fondo-index.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
+    font-family: Lora, serif;
 }
 .contenedor{
     display: grid;
