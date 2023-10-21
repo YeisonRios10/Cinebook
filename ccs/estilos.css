@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@100;200;400;700&display=swap');
 /** MAQUETADO DE LA PÁGINA PARA PANTALLA DE COMPU*/
 *{
     margin:0px;
@@ -10,8 +10,13 @@
     background-attachment: fixed;
     background-size: cover;
 }
+h1, h2, h3{
+    font-weight: 700;
+}
 .contenedor{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Lora, serif;
+    font-size: 16px;
+    font-weight: 400;
     color: white;
     display: grid;
     grid-template: auto auto auto auto auto auto / 27% 27% 27% 1fr;
@@ -98,8 +103,118 @@
 #title:hover + #popup {
     display: block; 
 }
+/*? = = = = = E S T I L O   D E L   S E S I O N = = = = = */
+.user-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.user-img img{
+    width: 150px;
+    height: 150px;
+    border: 5px solid #fff; /* Borde blanco */
+    border-radius: 50%; /* Forma de círculo */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Sombra */
+    
+}
+/* Fondo del Modal */
+.modal-content {
+    background-image: url('../img/fondo_modal.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Cambia el color del texto */
+    opacity: .95;
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+.modal-body {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: Lora, serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+form{
+    padding: 5% ;
+}
+/* Estilos para el campo de correo */
+.form-group input[type="email"] {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 54px 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
 
+/* Estilos para el campo de contraseña */
+.form-group input[type="password"] {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 54px 10px;
+    width: 100%;
+    margin-top: 10px;
+font-size: 16px;
+}
+.form-group input[type="date"] {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    padding-top: 4px;
+}
 
+  /* iconos awesome */
+
+.btn-primary {
+    background-color: #0074D9;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el enlace "¿Olvidaste tu contraseña?" */
+.forgot a {
+    color: #0074D9;
+    text-decoration: none;
+}
+  
+.forgot a:hover {
+    text-decoration: underline;
+}
+.pass,
+.correo{
+    position: relative;
+}
+.pass input,
+.correo input{
+    padding-left: 30px;
+}
+.pass i.fa-lock,
+.correo i.fa-mailchimp{
+    color: #000000; 
+    position: absolute; 
+    top: 70%; 
+    right: 90%; 
+    transform: translateY(-50%);
+}
+  
 /*? = = = = = E S T I L O   D E L   C A R R U S E L = = = = = */
 .carrusel{
     grid-area: carrusel;
@@ -146,6 +261,45 @@
 .punto.activo{
     background-color: rgb(70, 67, 67);
     border-radius: 200px 200px 200px 200px;
+}
+
+/*? = = = = = E S T I L O    G A L E R I A   E S C R I T O R E S  = = = = = */
+section{
+    height: 85vh;
+    width: 98%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:0.5px solid gray;
+}
+
+section img{
+    width: 0px;
+    height:100%;
+    flex-grow: 1;/*que dentro de la caja flexible ocupe todo el espacio que pueda*/
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .5s ease;
+}
+
+section img:hover{
+    width: 30%;
+    opacity: 1;
+    filter:contrast(120%);
+}
+
+@media screen and (max-width: 768px){
+    section{
+        flex-wrap: wrap;
+    }
+    section img{
+        height: 80%;
+    }
+    section img:hover{
+        width: 70%;
+        
+    }
 }
 /*! = = = = = E S T I L O   P E L I C U L A   S E C C  1  = = = = = */
 .pelis{
